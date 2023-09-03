@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-md-6">
+        <div class="row">
+            <audio id ="audioControl" class="audioControl" controls="" preload="none"> 
+                <source src="" type="audio/mpeg">
+            </audio>
+            {{currentNumber}} / {{totalsongs}}
+        </div>
+        <div class="row">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    <button class="btn btn-default" ng-click="loadAudio()">Load Audio</button>
+                    <button class="btn btn-success" ng-click="playAudio()">Play Audio</button>
+                    <button class="btn btn-success" ng-click="prevAudio()">Prev</button>
+                    <button class="btn btn-default" ng-click="nextAudio()">Next</button>
+                </p>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="col-md-8">
+                <p>
+                    <button class="btn btn-info" ng-click="pauseAudio()">Pause Audio</button>
+                    <button class="btn btn-danger" ng-click="stopAudio()">Stop Audio</button>
+                    <button class="btn btn-info" ng-click="toggleMuteAudio()">Vol On/Off</button> 
+                    <button class="btn btn-danger" ng-click="showSong()">Show Song</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="row"> Song - {{showSongName}}
+        <!--
+        <div ng-repeat="pl in playlistItem">
+            <ol>{{$index+1}} - {{pl.name}} </ol>
+        </div>
+        -->
+    </div>

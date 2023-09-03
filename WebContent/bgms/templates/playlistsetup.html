@@ -1,0 +1,47 @@
+<div>
+	<div class="container-fluid">
+		<h2> Setup</h2>
+	</div>
+
+	<div class="row" >
+
+		<div class="col-lg-4 col-sm-3 col-md-4 text-center" >
+
+			<div class="row">
+				<audio controls>
+						<source src="mp3/Iruvar-Narumugaye.mp3" type="audio/mpeg" class="audioDemo">
+						Your browser does not support the audio element.
+				</audio>
+			</div>
+			<div class="row"> &nbsp; </div>
+
+			<div class="row"> 
+				<select ng-options="pl.file as pl.name for pl in songFileArray" 
+	   				ng-model="songFile" ng-change="loadSongFile(songFile)">
+	   				 <option value="">Select Play List</option>
+	  			</select>
+			</div>
+			<div class="row">&nbsp;</div>
+
+			<div class="row">
+				<table border="2" cellspacing="10">
+					<thead>
+						<th> Sl.No </th>
+						<th> Video Name </th>
+						<th> Video Id </th>
+					</thead>
+					<tbody>
+						<tr ng-repeat="pl in playlistItem" align="left">
+							<td nowrap>{{$index+1}}</td>
+							<td nowrap>{{pl.snippet.title}}</td>
+							<td nowrap>{{pl.snippet.resourceId.videoId}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+		</div>
+	</div>
+
+</div>

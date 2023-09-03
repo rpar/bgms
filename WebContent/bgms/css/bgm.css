@@ -1,0 +1,38 @@
+#teamALogo {
+    background-color: #5bc0de;
+}
+
+#teamBLogo {
+    background-color: #5cb85c;
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 20px;
+    line-height: 1.428571429;
+    border-radius: 25px;
+}
+
+.btn-rectangle {
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 15px;
+    border-radius: 25px;
+    background-color: #5cb85c;
+}
+
+.btn-play {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 15px;
+    border-radius: 25px;
+    background-color: #5bc0de;
+}
+

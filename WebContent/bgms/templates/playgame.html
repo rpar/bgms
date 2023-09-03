@@ -1,0 +1,92 @@
+
+	<div>
+		<div class="container-fluid">
+			<h1>{{projectTitle}} </h1>
+			<p><input type="checkbox" ng-model="showVideo">  Identify the song</p> 
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-4 col-sm-3 col-md-4 text-center" >
+
+				<div class="panel">
+					<div class="panel-heading">
+						<div class="input-group ">
+							<div class="input-group-addon" id="{{teamA.logo}}"> 
+								<div class="glyphicon glyphicon-user"></div>
+							</div>
+							<input type="text" class="form-control" placeholder="{{teamA.name}}" id="{{teamA.logo}}" value="{{teamA.name}}"> 
+						</div>
+					</div>	
+					<div class="panel-body">
+						<input type="text" id="teamAdial" value="0" class="dial" data-angleArc="250" data-angleOffset="-125" >
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-sm-3 col-md-4 text-center">
+
+				<div class="panel-success">
+					<div class="panel-heading">Controller & Timer</div>
+					<div class="panel-body">
+						<!-- Timer counter START-->
+						<div class="row">
+							<div class="btn btn-info btn-circle" style="size: 105px;">
+								<span ng-click="startTimer()">{{showCounter}}</span>
+							</div>
+						</div>
+						<!-- Timer counter END-->
+						<div class="row">&nbsp;</div>
+						<div class="row">
+							<!-- div song controllers START-->
+							<div style="font-size: 35px;">
+								<a href ng-click="loadSong(currentNumber - 1)"><span class="glyphicon glyphicon-arrow-left"></span></a>
+								<a href ng-click="stopSong()"><span class="glyphicon glyphicon-stop"></span></a>&nbsp;
+								<a href ng-click="playSong()"><span class="glyphicon glyphicon-play"></span></a>
+								<a href ng-click="loadSong(currentNumber + 1)"><span class="glyphicon glyphicon-arrow-right"></span></a>
+							</div>
+							<!-- div song controllers END-->
+						</div>
+
+						<div class="row" style="font-size: 10px;">Playing {{currentNumber + 1}} of {{playlistItem.length}}</div>
+						<div class="row" style="font-size: 10px;"><button class="btn-rectangle" ng-click="showSong()" >Show </button></div>
+						<div class="row">&nbsp;</div>
+						<div class="html5-video-container" ng-show="showVideo">
+							<iframe id="player" type="text/html" width="200" height="100" src="" frameborder="10" border="0" ></iframe>
+						</div>
+						<div class="row" style="font-size: 10px;">{{videoName}}</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- /.col-lg-4 -->
+			<div class="col-lg-4 col-sm-3 col-md-4 text-center" >
+
+				<div class="panel">
+					<div class="input-group">
+						<div class="input-group-addon" id="{{teamB.logo}}"> 
+							<div class="glyphicon glyphicon-user"></div>
+						</div> 
+						<input type="text" class="form-control" placeholder="{{teamB.name}}" id="{{teamB.logo}}" value="{{teamB.name}}"> 
+					</div>
+					<div class="panel-body">
+						<input type="text" id="teamBdial" value="0" class="dial" data-angleArc="250" data-angleOffset="-125" >
+					</div>
+				</div>
+
+			</div>
+			<!-- /.col-lg-4 -->
+		</div>
+		<!-- /.row -->
+
+		<script>
+		    $(function() {
+		        $(".dial").knob();
+		    });
+		</script>
+
+
+
+	</div>

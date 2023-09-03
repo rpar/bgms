@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bgmModule">
+<head>
+<title>BGM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link
+	href="http://marcoceppi.github.io/bootstrap-glyphicons/css/bootstrap.icon-large.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="css/bgm.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
+
+<script src="script/common.js"></script>
+<script src="script/bgm.js"></script>
+<script src="script/audioplaygame.js"></script>
+<script src="script/playlistsetup.js"></script>
+
+</head>
+<body>
+
+	<!--start of navigation menu-->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation </span> <span
+						class="icon-bar"> </span> <span class="icon-bar"> </span> <span
+						class="icon-bar"> </span>
+				</button>
+				<a class="nav navbar-brand" href="#/home"><span
+					class="glyphicon glyphicon-home"></span> Home </a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="#/playgame"><span class="icon-large icon-playlist"></span>Play Game </a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" 
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false"> 
+							<span class="icon-large icon-cog"></span>
+							<span>Settings</span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#/teamsetup">Team Setup</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#/gamesetup">Game Setup</a></li>
+							<!--<li><a href="#/playlistsetup">Playlist Setup</a></li>-->
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<!--end of navigation menu-->
+
+	<div class="container" ng-view >
+
+	</div>
+
+</body>
+</html>
