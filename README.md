@@ -2,6 +2,10 @@
 
 Identify the Song based on Background music
 
-Static Site is hosted in Github [https://rpar.github.io/bgms/]
+Static website is hosted in Github [https://rpar.github.io/bgms/]
 
-[BGMS](https://rpar.github.io/bgms/)
+[BGMS Homepage](https://rpar.github.io/bgms/)
+
+[Youtube Songs](https://rpar.github.io/bgms/#/home)
+
+[Mp3 songs](https://rpar.github.io/bgms/#/audioplaygame)
