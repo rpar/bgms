@@ -1,3 +1,4 @@
+<!-- Audio Game Page -->
 <div class="row">
 	<div class="col-md-6">
         <div class="row">
@@ -14,12 +15,20 @@
                     <select id="playlist" ng-options="pl.file as pl.name for pl in songFileArray" 
                     ng-model="songFile" ng-change="loadAudio(songFile)" class="form-control input-md">
                      <option value="">Choose Play List</option>
-                    </select><br>
-
-                    <button class="btn btn-default" ng-click="loadAudio()">Load Audio</button>
-                    <button class="btn btn-success" ng-click="playAudio()">Play Audio</button>
+                    </select>
+                </p>
+            </div>
+            <div class="col-md-8">
+                <p>
                     <button class="btn btn-success" ng-click="prevAudio()">Prev</button>
-                    <button class="btn btn-default" ng-click="nextAudio()">Next</button>
+                    <button class="btn btn-info" ng-click="nextAudio()">Next</button>
+                    <button class="btn btn-success" ng-click="playAudio()">Play Audio</button>
+
+                </p>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    <button class="btn btn-danger" ng-click="showSong()">Show Song</button>
                 </p>
             </div>
             <div class="row">&nbsp;</div>
@@ -28,7 +37,6 @@
                     <button class="btn btn-info" ng-click="pauseAudio()">Pause Audio</button>
                     <button class="btn btn-danger" ng-click="stopAudio()">Stop Audio</button>
                     <button class="btn btn-info" ng-click="toggleMuteAudio()">Vol On/Off</button> 
-                    <button class="btn btn-danger" ng-click="showSong()">Show Song</button>
                 </p>
             </div>
         </div>
