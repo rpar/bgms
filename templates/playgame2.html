@@ -4,13 +4,18 @@
             <audio id ="audioControl" class="audioControl" controls="" preload="none"> 
                 <source src="" type="audio/mpeg">
             </audio>
-            {{currentNumber}} / {{totalsongs}}
+            {{currentNumber + 1}} / {{totalsongs}}
         </div>
         <div class="row">&nbsp;</div>
 
         <div class="row">
             <div class="col-md-8">
                 <p>
+                    <select id="playlist" ng-options="pl.file as pl.name for pl in songFileArray" 
+                    ng-model="songFile" ng-change="loadAudio(songFile)" class="form-control input-md">
+                     <option value="">Choose Play List</option>
+                    </select><br>
+
                     <button class="btn btn-default" ng-click="loadAudio()">Load Audio</button>
                     <button class="btn btn-success" ng-click="playAudio()">Play Audio</button>
                     <button class="btn btn-success" ng-click="prevAudio()">Prev</button>

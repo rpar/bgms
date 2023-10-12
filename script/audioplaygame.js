@@ -1,3 +1,7 @@
+/**
+	This file manages the Mp3 version for the game. 
+	Loads from the local mp3 file
+ */
 
 bgmApp.controller("audioController", function($scope, $http, $window, bgmService, bgmFactoryService ) {
 
@@ -5,6 +9,12 @@ bgmApp.controller("audioController", function($scope, $http, $window, bgmService
 	$scope.currentNumber = 0;
 	$scope.songName = "";
 	$scope.totalsongs = 0;
+
+	$scope.songFileArray = [
+		{name : "Illayaraja songs", file:"data-mp3/I1.json" }, 
+		{name : "AR Rahman Songs", file:"data-mp3/ARR1.json" },
+		{name : "Hariharan Songs", file:"data-mp3/Hariharan1/hariharan.json" },
+	];
 
 	var audioCtrl;
     $scope.initAudioCtrl = function(){
@@ -15,7 +25,7 @@ bgmApp.controller("audioController", function($scope, $http, $window, bgmService
         }
      }
 
-    $scope.loadAudio = function(){
+    $scope.loadAudio = function(dataURL){
 		$scope.initAudioCtrl();
 		
 		//resetting the currentl song number to 0
@@ -24,7 +34,8 @@ bgmApp.controller("audioController", function($scope, $http, $window, bgmService
 
 		audioCtrl.trigger('load');
 		//var dataURL = "data-mp3/I1.json";
-		var dataURL = "data-mp3/ARR1.json";
+		//var dataURL = "data-mp3/ARR1.json";
+		//var dataURL = "data-mp3/Hariharan1/hariharan.json";
 
 		bgmService.getData(dataURL, function(dataResponse){
 			$scope.playlistItem = dataResponse;
@@ -65,6 +76,7 @@ bgmApp.controller("audioController", function($scope, $http, $window, bgmService
 			sTime = songObj.sTime;
 			$scope.songName = songObj.name;
 			$scope.showSongName = "";
+			$scope.showSongName = $scope.songName ; //to be removed
 		}
     	audioCtrl.prop("src", videoURL)
 		audioCtrl.prop("currentTime", sTime);
