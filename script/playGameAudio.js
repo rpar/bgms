@@ -13,7 +13,7 @@ bgmApp.controller("audioController", function($scope, $http, $window, bgmService
 	$scope.songFileArray = [
 		{name : "Illayaraja songs", file:"data-mp3/I1.json" }, 
 		{name : "AR Rahman Songs", file:"data-mp3/ARR1.json" },
-		{name : "Hariharan Songs", file:"data-mp3/Hariharan1/hariharan.json" },
+		{name : "Hariharan Songs", file:"data-mp3/hariharan.json" },
 	];
 
 	var audioCtrl;
